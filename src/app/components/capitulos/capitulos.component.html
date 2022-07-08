@@ -1,0 +1,27 @@
+  <div class="row">
+      <input type="text" #termino class="form-control" value="" (keyup)="setUrlSearchCapitulos(termino.value)" placeholder="search..." style="cursor: pointer">
+  <div class="table" style=" background-color: aquamarine;   display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  background-color: aquamarine;" >
+
+          <tbody>
+                  <th scope="col">Nombre de capitulo</th>
+                  <th scope="col">Fecha de presentación </th>
+                  <th scope="col">Lista de personajes</th>
+                  <tr *ngFor="let listadoCapitulos of listaCapitulos">
+                  <th> {{ listadoCapitulos.name }} </th>
+                  <td> {{ listadoCapitulos.air_date }} </td>
+                  <td>
+                  <ul style="list-style: none;">
+                          <li [routerLink]="['capitulos-personajes']" *ngFor="let personaje of listadoCapitulos.personajes" (click)="verCapitulos( personaje )">
+                              {{personaje.name}}
+                          </li>
+                      </ul>
+
+                  </td>
+              </tr>
+          </tbody>
+  </div>
+</div>

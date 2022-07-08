@@ -1,0 +1,21 @@
+<h1>
+  <p>
+    <mat-toolbar color="primary">
+      <span>Rick And Morty</span>
+      <span class="example-spacer"></span>
+
+      <button mat-button routerLink="/registro">Registro</button>
+      <button mat-button routerLink="/login">Login</button>
+      <button mat-button routerLink="/capitulos">Episodios</button>
+      <button mat-button routerLink="/personajes">Personajes</button>
+
+      <span class="example-spacer"></span>
+      <button routerLink="logout" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </mat-toolbar>
+
+  </p>
+
+</h1>
+<router-outlet></router-outlet>

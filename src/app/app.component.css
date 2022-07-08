@@ -1,0 +1,10 @@
+.spinner{
+  margin: 0 auto;
+}
+
+.button{
+  background-color: transparent;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}

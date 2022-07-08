@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+      <input type="text" #termino class="form-control" value="" (keyup)="setUrlSearchPersonajes(termino.value)" placeholder="search..." style="cursor: pointer">
+      <div class="container mt-5">
+            <div *ngFor="let listadoPersonajes of listaPersonajes ">
+                <div class="characters" style=" background-color: aquamarine; ">
+                    <div class="row no-gutters">
+                        <div class="col-md-5">
+                            <img [src]="listadoPersonajes.image" style="
+                            background-color: aliceblue;
+                            display: flex;
+                            width: 130%;
+                            flex-wrap: wrap;
+                            max-width: 350px;
+                            margin:auto; ">
+                            <div class="col-md-7 mb-0" >
+                            <div class="card-body" style="padding: 5px;
+                            background-color: aliceblue;
+                            width: 130%;
+                            flex-wrap: wrap;
+                            max-width: 340px;
+                            margin:auto; " >
+                                <h2 class="card-title text1 mb-10" style="font-size: 30px;">
+                                {{ listadoPersonajes.name }} </h2>
+                                <p class="card-text mb-0"><small> Especie: </small></p>
+                                <p class="card-text text2"> {{ listadoPersonajes.species }}</p>
+                                <p class="card-text mb-0"><small> Estado: </small></p>
+                                <p class="card-text text3"> {{ listadoPersonajes.status }}</p>
+                                <p class="card-text mb-0"><small> Genero: </small></p>
+                                <p class="card-text text4"> {{ listadoPersonajes.gender }}</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
